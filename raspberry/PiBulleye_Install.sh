@@ -177,10 +177,10 @@ echo -----------------------------------------------------
 echo Disable Standard Bluetooth and enable new HCI socket 
 echo -----------------------------------------------------
 
-sudo systemctl disable bluetooth
-sudo cp ~/FortiusAnt_Install/enable-bluetooth.service /etc/systemd/system
-sudo systemctl enable enable-bluetooth
-echo -----------------------------------------------------
+#sudo systemctl disable bluetooth
+#sudo cp ~/FortiusAnt_Install/enable-bluetooth.service /etc/systemd/system
+#sudo systemctl enable enable-bluetooth
+#echo -----------------------------------------------------
 #
 Raspberry='\033[0;35m'
 printf "${Raspberry} pi user is granted access to usb after reboot, press Enter to continue: "
