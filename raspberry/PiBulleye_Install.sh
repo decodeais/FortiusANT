@@ -1,4 +1,4 @@
-#!/bin/bash
+e#!/bin/bash
 
 echo ----------------------------------------------------------
 echo     Update your system
@@ -26,7 +26,7 @@ echo ----------------------------------------------------------
 echo     Clone FortiusANT from Github into ~/FortiusANT directoy
 echo ----------------------------------------------------------
 
-git clone https://github.com/WouterJD/FortiusANT.git  $HOME/FortiusANT
+git clone https://github.com/Decodeais/FortiusANT.git  $HOME/FortiusANT
 
 echo ----------------------------------------------------------
 echo     Install: build-essential bluetooth bluez libbluetooth-dev libudev-dev
