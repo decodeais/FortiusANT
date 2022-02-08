@@ -1,0 +1,12 @@
+#copy to /etc/systemd/system
+#enable this command "systemctl enable enable-bluetooth"
+[Unit]
+Description=Enable Bluetooth
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/hciconfig hci0 up
+
+[Install]
+WantedBy=multi-user.target
+
