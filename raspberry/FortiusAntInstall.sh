@@ -4,6 +4,16 @@ sudo apt update
 sudo apt upgrade
 sudo apt install git
 #git clone https://github.com/WouterJD/FortiusANT.git
+# ----------------------------------------------------------
+# Download (clone) FortuisAnt
+# ----------------------------------------------------------
+if [ -d "$HOME/FortiusANT" ] ; then
+	echo "FortiusANT already present"
+else
+	#git clone https://github.com/WouterJD/FortiusANT.git
+  git clone -b Wayland https://github.com/decodeais/FortiusANT.git $HOME/FortiusANT
+
+fi
 cd /home/pi/FortiusANT/raspberry
 
 sudo apt install python3-venv
