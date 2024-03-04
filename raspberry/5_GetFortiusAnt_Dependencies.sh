@@ -11,7 +11,9 @@ sudo apt install git
 if [ -d "$HOME/FortiusANT" ] ; then
 	echo "FortiusANT already present"
 else
-	git clone https://github.com/WouterJD/FortiusANT.git
+	#git clone https://github.com/WouterJD/FortiusANT.git
+  git clone -b Wayland https://github.com/decodeais/FortiusANT.git $HOME/FortiusANT
+
 fi
 
 # ----------------------------------------------------------
