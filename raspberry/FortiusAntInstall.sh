@@ -21,6 +21,5 @@ source FortAntEnv/bin/activate
 #./7_RunFortiusAntAtStartup.sh "$@"
 #./8_Share_UserPi.sh
 ./9_GrantAccessToBluetoothForBless.sh "$@"
-#./9_GrantAccessToUSB_withReboot.sh "$@"
-
 sudo cp /home/pi/FortiusANT/raspberry/FortiusAnt.desktop /usr/share/applications/FortiusAnt.desktop
+./9_GrantAccessToUSB_withReboot.sh
