@@ -96,9 +96,10 @@ echo add user pi to this group
 sudo adduser pi usbtacx
 
 # ----------------------------------------------------- Done
-Raspberry='\033[0;35m'
-printf "${Raspberry} pi user is granted access to usb after reboot, press Enter to continue: "
-read reply
+bash stop.sh "$@"
+#Raspberry='\033[0;35m'
+#printf "${Raspberry} pi user is granted access to usb after reboot, press Enter to continue: "
+#read reply
 
 # Reboot to activate rule
 sudo reboot now

@@ -57,6 +57,7 @@ rm -rf $NODEJS
 sudo setcap cap_net_raw+eip $(eval readlink -f `which node`)
 
 # ----------------------------------------------------- Done
-Raspberry='\033[0;35m'
-printf "${Raspberry} NodeJs is installed, press Enter to continue: "
-read reply
+bash stop.sh "$@"
+#Raspberry='\033[0;35m'
+#printf "${Raspberry} NodeJs is installed, press Enter to continue: "
+#read reply

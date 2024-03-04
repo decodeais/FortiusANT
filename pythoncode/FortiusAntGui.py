@@ -339,9 +339,10 @@ class frmFortiusAntGui(wx.Frame):
 
         BitmapX     = 0
         BitmapY     = 0
+        
 
-        self.      SetSize (BitmapX + BitmapW + 15, BitmapY + BitmapH)
-        self.panel.SetSize (BitmapX + BitmapW + 15, BitmapY + BitmapH)
+        self.      SetSize (BitmapX + BitmapW + 40, BitmapY + BitmapH+60)
+        self.panel.SetSize (BitmapX + BitmapW + 40, BitmapY + BitmapH+60)
 
         # ----------------------------------------------------------------------
 		# Speedometer values and colours
@@ -411,7 +412,7 @@ class frmFortiusAntGui(wx.Frame):
             self.Revs.DisableFocusFromKeyboard()
 
             self.Revs.SetSpeedBackground(bg)
-            self.Revs.SetFirstGradientColour(wx.BLUE)                       # Colours for SM_DRAW_GRADIENT
+            self.Revs.SetFirstGradientColour(colorTacxFortius)                       # Colours for SM_DRAW_GRADIENT
             self.Revs.SetSecondGradientColour(wx.WHITE)
             self.Revs.DrawExternalArc(True)                                 # Do (Not) Draw The External (Container) Arc.
             self.Revs.SetArcColour(wx.BLUE)
@@ -671,7 +672,7 @@ class frmFortiusAntGui(wx.Frame):
         self.Bind(wx.EVT_BUTTON, self.OnClick_btnHelp, self.btnHelp)
 
         # Move Help button above the texts
-        self.btnHelp.SetPosition((ButtonX, self.txtUsbTrainer.Position[1] - self.txtUsbTrainer.Size[1] - Margin))
+        self.btnHelp.SetPosition((ButtonX, self.txtUsbTrainer.Position[1] - self.txtUsbTrainer.Size[1] - Margin-8))
         # Move Sponsor button above Help
         self.btnSponsor.SetPosition((ButtonX, self.btnHelp.Position[1] - self.btnHelp.Size[1] - Margin))
 
@@ -1609,8 +1610,8 @@ class clsGearboxOverlay(wx.Frame):
         # ----------------------------------------------------------------------
 		# Create frame
         # ----------------------------------------------------------------------
-        frameX = 2 * Margin +     pCranckset.Size[0] + 15
-        frameY = 3 * Margin + 2 * pCranckset.Size[1] + 39
+        frameX = 60#jps 2 * Margin +     pCranckset.Size[0] + 15
+        frameY = 200 #3 * Margin + 2 * pCranckset.Size[1] + 39
 
         style = wx.STAY_ON_TOP | wx.FRAME_TOOL_WINDOW | wx.CAPTION | wx.CLOSE_BOX
         wx.Frame.__init__(self, None, title='Gearbox', size = (frameX,frameY), style = style)

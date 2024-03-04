@@ -37,6 +37,8 @@ else
 fi
 
 # ----------------------------------------------------- Done
-Raspberry='\033[0;35m'
-printf "${Raspberry} pi home folder is shared as [PiShare], press Enter to continue: "
-read reply
+bash stop.sh "$@"
+
+#Raspberry='\033[0;35m'
+#printf "${Raspberry} pi home folder is shared as [PiShare], press Enter to continue: "
+#read reply
