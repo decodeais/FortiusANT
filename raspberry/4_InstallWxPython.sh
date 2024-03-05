@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [[ $1 == "n" ]]; then
+    YES="-y"
+else
+    YES=""
+fi
+
 if [ `uname -m` == 'armv6l' ]; then
     Red='\033[0;31m'
     NC='\033[0m'
@@ -13,7 +19,7 @@ else
     # ----------------------------------------------------------
     # Go to Downloads
     # ----------------------------------------------------------
-    cd ~/Downloads
+    pushd ~/Downloads
 
     # ----------------------------------------------------------
     # Download pre-build wxPython package to home folder.
@@ -29,7 +35,7 @@ else
     pip3 install $wxPYTHON
     pip install pyusb
     pip install lib_programname
-    sudo apt-get install libglib2.0-dev 
+    sudo apt-get install $YES libglib2.0-dev
     # sudo apt-get install $wxPYTHON Fallback if the Dowloaded is not the right one
     # ----------------------------------------------------------
     # If you can not use the prebuild package, you need follow the install instructions
@@ -52,8 +58,8 @@ else
     # ----------------------------------------------------------
     # Cleanup
     # ----------------------------------------------------------
-    cd ~/Downloads
     rm $wxPYTHON
+    popd
 
     # ----------------------------------------------------- Done
     bash stop.sh "$@"

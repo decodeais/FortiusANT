@@ -8,7 +8,7 @@ if [ $? == 1 ] ; then
     #cp /etc/dbus-1/system.d/bluetooth.conf                            ./bluetooth.conf.org
     cat /etc/dbus-1/system.d/bluetooth.conf | sed 's/<\/busconfig>//' >./bluetooth.conf
     cat << EOF >> ./bluetooth.conf
-  <policy user="pi">
+  <policy user="$USER">
     <allow own="org.bluez"/>
     <allow own="org.bluez.FortiusAntTrainer"/>
     <allow send_destination="org.bluez.FortiusAntTrainer"/>

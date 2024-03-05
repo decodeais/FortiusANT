@@ -3,15 +3,14 @@
 # ----------------------------------------------------------
 # Update your system
 # ----------------------------------------------------------
-sudo apt update
-sudo apt full-upgrade
+if [[ $1 == "n" ]]; then
+    YES="-y"
+else
+    YES=""
+fi
+
+sudo apt-get $YES update
+sudo apt-get $YES full-upgrade
 
 # ----------------------------------------------------- Done
 bash stop.sh "$@"
-
-
-
-#Raspberry='\033[0;35m'
-#printf "${Raspberry} System is upgraded, press Enter to continue: "
-#read reply
-

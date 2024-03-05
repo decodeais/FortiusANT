@@ -2,12 +2,13 @@
 #-------------------------------------------------------------------------------
 # Goto startup directory, logfiles are created here
 #-------------------------------------------------------------------------------
-cd ~/FortiusANT/raspberry
 
-echo Trashcan emptied - keep 1 month
-find /home/pi/.local/share/Trash/ -name '*.log*'  -type f -mtime +30 -delete
-find /home/pi/.local/share/Trash/ -name '*.json*' -type f -mtime +30 -delete
-find /home/pi/.local/share/Trash/ -name '*.tcx*'  -type f -mtime +30 -delete
+if [[ -d $HOME/.local/share/Trash ]]; then
+    echo Trashcan emptied - keep 1 month
+    find $HOME/.local/share/Trash/ -name '*.log*'  -type f -mtime +30 -delete
+    find $HOME/.local/share/Trash/ -name '*.json*' -type f -mtime +30 -delete
+    find $HOME/.local/share/Trash/ -name '*.tcx*'  -type f -mtime +30 -delete
+fi
 
 echo Log-files from previous session are deleted - keep two days
 find ./ -name '*.log'  -type f -mtime +2 -delete

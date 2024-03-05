@@ -56,7 +56,7 @@ fi
 
 # ----------------------------------------------------------
 # Furthermore we assign the device file to our user so that
-# he can read and write to it. In my example the user is pi.
+# he can read and write to it.
 # Please also adjust the following example with your usb ids
 # (vendor and product).
 # It is also possible to assign Groups.
@@ -92,14 +92,15 @@ rm $USBRULES
 # ----------------------------------------------------------
 echo Create group usbtacx
 sudo addgroup usbtacx
-echo add user pi to this group
-sudo adduser pi usbtacx
+echo add user $USER to this group
+sudo adduser $USER usbtacx
 
 # ----------------------------------------------------- Done
 bash stop.sh "$@"
+
 #Raspberry='\033[0;35m'
 #printf "${Raspberry} pi user is granted access to usb after reboot, press Enter to continue: "
 #read reply
 
 # Reboot to activate rule
-sudo reboot now
+#sudo reboot now

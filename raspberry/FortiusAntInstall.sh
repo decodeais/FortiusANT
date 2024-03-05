@@ -1,8 +1,14 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt upgrade
-sudo apt install git
+if [[ $1 == "n" ]]; then
+    YES="-y"
+else
+    YES=""
+fi
+
+sudo apt-get $YES update
+sudo apt-get $YES upgrade
+
 #git clone https://github.com/WouterJD/FortiusANT.git
 # ----------------------------------------------------------
 # Download (clone) FortuisAnt
@@ -14,9 +20,8 @@ else
   git clone -b Wayland https://github.com/decodeais/FortiusANT.git $HOME/FortiusANT
 
 fi
-cd /home/pi/FortiusANT/raspberry
+cd $HOME/FortiusANT/raspberry
 
-sudo apt install python3-venv
 python3 -m venv FortAntEnv
 source FortAntEnv/bin/activate
 
@@ -31,5 +36,8 @@ source FortAntEnv/bin/activate
 #./7_RunFortiusAntAtStartup.sh "$@"
 #./8_Share_UserPi.sh
 ./9_GrantAccessToBluetoothForBless.sh "$@"
-sudo cp /home/pi/FortiusANT/raspberry/FortiusAnt.desktop /usr/share/applications/FortiusAnt.desktop
-./9_GrantAccessToUSB_withReboot.sh
+
+cat FortiusAnt.desktop.org | sed "s%__HOME__%$HOME%" > FortiusAnt.desktop
+sudo cp $HOME/FortiusANT/raspberry/FortiusAnt.desktop /usr/share/applications/FortiusAnt.desktop
+
+./9_GrantAccessToUSB_withReboot.sh "$@"

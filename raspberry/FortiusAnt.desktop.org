@@ -1,9 +1,9 @@
 [Desktop Entry]
-Icon=/home/pi/FortiusANT/pythoncode/FortiusAnt.ico
+Icon=__HOME__/FortiusANT/pythoncode/FortiusAnt.ico
 Name=FortiusAnt
-Exec=/home/pi/FortiusANT/raspberry/FortiusAntMenue.sh
+Exec=__HOME__/FortiusANT/raspberry/FortiusAntMenue.sh
 Type=Application
-Path=/home/pi/FortiusANT/raspberry/
+Path=__HOME__/FortiusANT/raspberry/
 GenericName=TACX Trainer
 Comment[en_GB]=Roll On
 StartupNotify=true

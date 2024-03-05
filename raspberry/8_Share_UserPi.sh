@@ -1,10 +1,16 @@
 #!/bin/bash
 # https://raspberrypihq.com/how-to-share-a-folder-with-a-windows-computer-from-a-raspberry-pi/
 
+if [[ $1 == "n" ]]; then
+    YES="-y"
+else
+    YES=""
+fi
+
 # ----------------------------------------------------------
 # Install samba
 # ----------------------------------------------------------
-sudo apt-get install samba samba-common-bin
+sudo apt-get $YES install samba samba-common-bin
 
 # ----------------------------------------------------------
 # Modify smb.conf:
@@ -19,7 +25,7 @@ if [ $? == 1 ] ; then
     cat << EOF >> ./smb.conf
 [PiShare]
 comment=Raspberry Pi Share
-path=/home/pi
+path=$HOME
 browseable=Yes
 writeable=Yes
 only guest=no
