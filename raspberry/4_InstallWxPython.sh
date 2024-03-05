@@ -5,12 +5,16 @@ if [[ $1 == "n" ]]; then
 else
     YES=""
 fi
-
-if [ `uname -m` == 'armv6l' ]; then
+processor=$(uname -m)
+if [ $processor == 'armv6l' ]; then
     Red='\033[0;31m'
     NC='\033[0m'
     printf "${Raspberry} wxPython not available for Raspberry Pi0, press Enter to continue: ${NC}"
     read x
+elif [ $processor == *"x86_64"* ]; then    
+    SRC=https://drive.google.com/file/d/1OfrzBGTBdTkQVVa6e4IScxT4cd_jT7C3
+    wxPYTHON=wxPython-4.2.2a1-cp311-cp311-linux_x86_64.whl 
+    GDRIVE=https://drive.google.com/file/d/1OfrzBGTBdTkQVVa6e4IScxT4cd_jT7C3/view?usp=sharing
 else
     SRC=https://drive.google.com/drive/folders/1pPrAQLd3plFiuZYifh1HSn_Kr5Iy2EVr
     wxPYTHON=wxPython-4.2.2a1-cp311-cp311-linux_aarch64.whl
@@ -26,7 +30,7 @@ else
     # ----------------------------------------------------------
     #sudo pip install gdown
     pip install gdown
-    gdown --id 1pPrAQLd3plFiuZYifh1HSn_Kr5Iy2EVr --output $wxPYTHON
+    gdown -c --id $SRC --output $wxPYTHON
     # ----------------------------------------------------------
     # This wheel package works for an ARM7l CPU.
     # Install package with
@@ -58,7 +62,7 @@ else
     # ----------------------------------------------------------
     # Cleanup
     # ----------------------------------------------------------
-    rm $wxPYTHON
+    # rm $wxPYTHON
     popd
 
     # ----------------------------------------------------- Done
