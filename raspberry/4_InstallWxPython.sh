@@ -29,7 +29,8 @@ else
     pip3 install $wxPYTHON
     pip install pyusb
     pip install lib_programname
-    sudo apt-get install libglib2.0-dev $wxPYTHON
+    sudo apt-get install libglib2.0-dev 
+    # sudo apt-get install $wxPYTHON Fallback if the Dowloaded is not the right one
     # ----------------------------------------------------------
     # If you can not use the prebuild package, you need follow the install instructions
     # below to build your own wxPython by replacing the version with 4.1.1
