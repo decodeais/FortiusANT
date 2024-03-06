@@ -5,7 +5,14 @@ if [[ $1 == "n" ]]; then
 else
     YES=""
 fi
+
 processor=$(uname -m)
+
+echo "######################################"
+echo "       $processor"
+echo "######################################"
+
+
 if [ $processor == 'armv6l' ]; then
     Red='\033[0;31m'
     NC='\033[0m'
@@ -19,7 +26,7 @@ else
     SRC=1pPrAQLd3plFiuZYifh1HSn_Kr5Iy2EVr
     wxPYTHON=wxPython-4.2.2a1-cp311-cp311-linux_aarch64.whl
     GDRIVE=https://drive.google.com/file/d/1pPrAQLd3plFiuZYifh1HSn_Kr5Iy2EVr/view?usp=sharing
-
+fi
     # ----------------------------------------------------------
     # Go to Downloads
     # ----------------------------------------------------------
@@ -70,4 +77,4 @@ else
     #Raspberry='\033[0;35m'
     #printf "${Raspberry} Pre-built Python is installed, press Enter to continue: "
     #read reply
-fi
+
