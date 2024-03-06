@@ -21,20 +21,37 @@ else
 
 fi
 cd $HOME/FortiusANT/raspberry
-
+echo "##########################################################################"
+echo "             Virtual enwiremont wir eingerichtet                          "
+echo "##########################################################################"
+which python
 python3 -m venv FortAntEnv
 source FortAntEnv/bin/activate
-
+which python
 ./1_UpgradeSystem.sh "$@"
+echo "##########################################################################"
+echo "             2_InstallPackagesBLE.sh                          "
+echo "##########################################################################"
 ./2_InstallPackagesBLE.sh "$@"
 #./3_InstallBless_2022Q2_only.sh "$@"
+echo "##########################################################################"
+echo "            3_InstallMissingPackages.sh                     "
+echo "##########################################################################"
 ./3_InstallMissingPackages.sh "$@"
-
+echo "##########################################################################"
+echo "             4_InstallWxPython.sh                          "
+echo "##########################################################################"
 ./4_InstallWxPython.sh "$@"
+echo "##########################################################################"
+echo "             5_GetFortiusAnt_Dependencies.sh                        "
+echo "##########################################################################"
 ./5_GetFortiusAnt_Dependencies.sh "$@"
 #./6_SetupNodeJs_FortiusAnt.sh "$@"
 #./7_RunFortiusAntAtStartup.sh "$@"
 #./8_Share_UserPi.sh
+echo "##########################################################################"
+echo "            9_GrantAccessToBluetoothForBless.sh                      "
+echo "##########################################################################"
 ./9_GrantAccessToBluetoothForBless.sh "$@"
 
 cat FortiusAnt.desktop.org | sed "s%__HOME__%$HOME%" > FortiusAnt.desktop

@@ -3,6 +3,7 @@
 # Install packages for bless - they seem to be missing.
 # See https://github.com/WouterJD/FortiusANT/issues/415
 #
+pip install --upgrade pip
 pip3 install lib_detect_testenv
 pip3 install dbus_next
 pip install pyusb
