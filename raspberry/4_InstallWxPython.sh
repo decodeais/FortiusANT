@@ -11,7 +11,7 @@ if [ $processor == 'armv6l' ]; then
     NC='\033[0m'
     printf "${Raspberry} wxPython not available for Raspberry Pi0, press Enter to continue: ${NC}"
     read x
-elif [ $processor == *"x86_64"* ]; then    
+elif [ $processor == 'x86_64'' ]; then    
     SRC=1OfrzBGTBdTkQVVa6e4IScxT4cd_jT7C3
     wxPYTHON=wxPython-4.2.2a1-cp311-cp311-linux_x86_64.whl 
     GDRIVE=https://drive.google.com/file/d/1OfrzBGTBdTkQVVa6e4IScxT4cd_jT7C3/view?usp=sharing
