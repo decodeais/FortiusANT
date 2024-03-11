@@ -1,6 +1,9 @@
 #!/bin/bash
 # https://www.raspberrypi.org/forums/viewtopic.php?f=66&t=294014
-
+if [ -f "FortAntEnv/bin/activate" ]; then
+    source "FortAntEnv/bin/activate"; else
+    echo -e "\033[0;31m No virtual enviroment \033[0m"  
+fi
 mkdir -p $HOME/.config/lxsession
 mkdir -p $HOME/.config/lxsession/LXDE-pi
 

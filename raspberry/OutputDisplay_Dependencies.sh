@@ -1,5 +1,9 @@
 #!/bin/bash
 cd $HOME
+if [ -f "FortAntEnv/bin/activate" ]; then
+    source "FortAntEnv/bin/activate"; else
+    echo -e "\033[0;31m No virtual enviroment \033[0m"  
+fi
 # ----------------------------------------------------------
 # https://learn.adafruit.com/adafruit-mini-pitft-135x240-color-tft-add-on-for-raspberry-pi/python-setup
 # Install OutputDisplay dependencies

@@ -2,7 +2,10 @@
 #-------------------------------------------------------------------------------
 # Goto startup directory, logfiles are created here
 #-------------------------------------------------------------------------------
-
+if [ -f "FortAntEnv/bin/activate" ]; then
+    source "FortAntEnv/bin/activate"; else
+    echo -e "\033[0;31m No virtual enviroment \033[0m"  
+fi
 if [[ -d $HOME/.local/share/Trash ]]; then
     echo Trashcan emptied - keep 1 month
     find $HOME/.local/share/Trash/ -name '*.log*'  -type f -mtime +30 -delete

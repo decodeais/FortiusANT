@@ -1,5 +1,6 @@
 #!/bin/bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 cd $HOME
 # ----------------------------------------------------------
@@ -17,6 +18,12 @@ else
 fi
 >>>>>>> 9fd4982 (Update 5_GetFortiusAnt_Dependencies.sh)
 
+=======
+if [ -f "FortAntEnv/bin/activate" ]; then
+    source "FortAntEnv/bin/activate"; else
+    echo -e "\033[0;31m No virtual enviroment \033[0m"  
+fi
+>>>>>>> 5bbf657 (check venv)
 # ----------------------------------------------------------
 # Install dependencies
 # ----------------------------------------------------------

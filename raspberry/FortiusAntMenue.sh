@@ -1,5 +1,9 @@
 #!/bin/bash
-source FortAntEnv/bin/activate
+
+if [ -f "FortAntEnv/bin/activate" ]; then
+    source "FortAntEnv/bin/activate"; else
+    echo -e "\033[0;31m No virtual enviroment \033[0m"  
+fi
 # autostart, bluetooth, gui - which is most general for Raspberry usage
 # options:
 # -l            adds led/buttons
