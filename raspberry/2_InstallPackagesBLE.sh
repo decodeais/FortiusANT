@@ -12,6 +12,3 @@ sudo apt-get install $YES libatlas-base-dev # for numpy, https://github.com/nump
 # ----------------------------------------------------- Done
 bash stop.sh "$@"
 
-#Raspberry='\033[0;35m'
-#printf "${Raspberry} Packages are installed, press Enter to continue: "
-#read reply

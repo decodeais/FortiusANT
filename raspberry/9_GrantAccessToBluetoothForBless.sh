@@ -25,6 +25,4 @@ fi
 bash stop.sh "$@"
 
 
-#Raspberry='\033[0;35m'
-#printf "${Raspberry} pi is now allowed to use Bluetooth Low Energy, press Enter to continue: "
-#read reply
+
