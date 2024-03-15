@@ -27,6 +27,4 @@ echo "@lxterminal -e --working-directory=$HOME/FortiusANT/raspberry $HOME/Fortiu
 
 # ----------------------------------------------------- Done
 bash stop.sh "$@"
-#Raspberry='\033[0;35m'
-#printf "${Raspberry} FortiusAnt will be started after reboot, press Enter to continue: "
-#read reply
+

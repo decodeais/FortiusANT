@@ -38,6 +38,4 @@ fi
 # ----------------------------------------------------- Done
 
 bash stop.sh "$@"
-#Raspberry='\033[0;35m'
-#printf "${Raspberry} FortiusAnt and dependencies installed, press Enter to continue: "
-#read reply
+

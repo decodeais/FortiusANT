@@ -25,7 +25,7 @@ echo "##########################################################################
 echo "             Virtual enwiremont wir eingerichtet                          "
 echo "##########################################################################"
 which python
-python3 -m venv FortAntEnv
+python3.11 -m venv FortAntEnv
 source FortAntEnv/bin/activate
 which python
 ./1_UpgradeSystem.sh "$@"
