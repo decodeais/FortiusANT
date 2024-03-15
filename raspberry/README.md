@@ -1,3 +1,4 @@
+
 # The "Wayland" Branch
 The "Wayland" branch tries to solve issues  caused by the transition from Raspian to "Bookworm".
 
@@ -9,7 +10,6 @@ Many functions  have been changed.
 - Configuring the screensaver will be different too.
 - Scaling and positioning of WxPython GUI elements
 - and so on
-
 
 ## Changes from Python <3.10 to Python3.11
 Due to "Bookworm's" transition to Python version 3.11, the old Python installation scripts could no longer be executed as usual. Python now prefers to be installed and run in a virtual Python environment. Additionally, a more recent wxPython wheel is required for the GUI.
@@ -46,23 +46,11 @@ Currently tested on Zero2W and Raspi4B.
 
 ## New scripts
 
-<<<<<<< HEAD
-- `autostart_ON.sh   ` &emsp; enable autostart 
-- ``autostart_OFF.sh  `  &emsp; disable autostart
-- ``FortiusAntMenue.sh` &emsp;     script to modify the parameters for start FortiusAnt from the Raspi startmenue
-- ``venvEnter.sh      `  &emsp;          creates a terminal with the virtual Python environment
 
-# Preparations for creating the Image
-## Script to run on Raspi
-- ``cleanSD.sh `          Erase/uninstall everything we don't  need anymore
-## Scripts to run on the PC
-- ``backup.sh   `           Creates the image from the SD-card
-- ``pishrink.sh `        Compresses the image to self inflating Raspi-image
-=======
-`autostart_ON.sh   ` &emsp; enable autostart 
-`autostart_OFF.sh  `  &emsp; disable autostart
-`FortiusAntMenue.sh` &emsp;     script to modify the parameters for start FortiusAnt from the Raspi startmenue
-`venvEnter.sh      `  &emsp;          creates a terminal with the virtual Python environment
+- `autostart_ON.sh   ` &emsp; enable autostart 
+- `autostart_OFF.sh  `  &emsp; disable autostart
+- `FortiusAntMenue.sh` &emsp;     script to modify the parameters for start FortiusAnt from the Raspi startmenue
+- `venvEnter.sh      `  &emsp;          creates a terminal with the virtual Python environment
 
 # Preparations for creating the Image
 ## Script to run on Raspi
@@ -70,27 +58,19 @@ Currently tested on Zero2W and Raspi4B.
 ## Scripts to run on the PC
 - `backup.sh   `           Creates the image from the SD-card
 - `pishrink.sh `        Compresses the image to self inflating Raspi-image
->>>>>>> e7dc07d3d2ca2f0627860a12b5e1d7aaf0024054
+
 
 # Special files
 
 ## Rules
 These files will be copied to the operating sytem at the end of the installation process
-<<<<<<< HEAD
-- ``42-ant-usb-sticks.rules  `    Rules for all known Ant+ sticks and TacX controller ->/etc/udev/rules.d/
-- ``FortiusAntUsb2.conf      `    Configs for all known Ant+ sticks ->/etc/modprobe.d
 
-## Creation of wxPython 
-
-- ``build_wxPython_whl.sh  ` This script has to run with the target Python and CPU
-=======
 - `42-ant-usb-sticks.rules  `    Rules for all known Ant+ sticks and TacX controller ->/etc/udev/rules.d/
 - `FortiusAntUsb2.conf      `    Configs for all known Ant+ sticks ->/etc/modprobe.d
 
 ## Creation of wxPython 
 
 - `build_wxPython_whl.sh  ` This script has to run with the target Python and CPU
->>>>>>> e7dc07d3d2ca2f0627860a12b5e1d7aaf0024054
 
 ## the link for the Image
 Link: [Link]
@@ -98,12 +78,3 @@ Link: [Link]
 
 
 
-
-
-=======
-Test
-<<<<<<< HEAD
->>>>>>> 37f5c54 (Create README.md)
-=======
-
->>>>>>> e7dc07d3d2ca2f0627860a12b5e1d7aaf0024054

@@ -39,10 +39,12 @@ echo "Process completed."
 
 # Apply the "pishrink" script to the image
 echo "Applying 'pishrink' to the image ..."
+
 sudo ./pishrink.sh -v -a  "${image_path}" "shrinked_${image_path}" 
 #rm "$image_path" # optional
 sudo chown "$USER:$USER" "shrinked_${image_path}"
 zip "shrinked_${image_path}.zip" "shrinked_${image_path}" 
 #rm "shrinked_${image_path}" # optional
+
 echo "Process completed."
 read x

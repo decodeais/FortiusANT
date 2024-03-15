@@ -12,8 +12,3 @@ ATTR{idVendor}=="0fcf", ATTRS{idProduct}==”1008”, SUBSYSTEM==”tty”, ACTI
 ATTR{idVendor}=="0fcf", ATTRS{idProduct}==”1009”, SUBSYSTEM==”tty”, ACTION==”add”,   MODE=”0666”, GROUP=”usbtacx”
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> e7dc07d3d2ca2f0627860a12b5e1d7aaf0024054
