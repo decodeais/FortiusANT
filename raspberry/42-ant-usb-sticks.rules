@@ -1,0 +1,14 @@
+# Allow users in group usbtacx to access Tacx USB headunit
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", MODE="0664", GROUP="usbtacx"
+
+# This files changes the mode of the Dynastream ANT UsbStick2 so all users
+# can read and write to it.
+#
+# This file should go into '/etc/udev/rules.d'. Note that it should go in
+# before 73-seat-late.rules for `uaccess` to work.
+
+ATTR{idVendor}=="0fcf", ATTRS{idProduct}==”1004”, SUBSYSTEM==”tty”, ACTION==”add”,   MODE=”0666”, GROUP=”usbtacx”
+ATTR{idVendor}=="0fcf", ATTRS{idProduct}==”1008”, SUBSYSTEM==”tty”, ACTION==”add”,   MODE=”0666”, GROUP=”usbtacx”
+ATTR{idVendor}=="0fcf", ATTRS{idProduct}==”1009”, SUBSYSTEM==”tty”, ACTION==”add”,   MODE=”0666”, GROUP=”usbtacx”
+
+

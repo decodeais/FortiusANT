@@ -20,6 +20,4 @@ pip install lib_programname
 pip3 install git+https://github.com/gwangyi/pysetupdi
 # ----------------------------------------------------- Done
 bash stop.sh "$@"
-#Raspberry='\033[0;35m'
-#printf "${Raspberry} NodeJs is installed, press Enter to continue: "
-#read reply
+

@@ -117,6 +117,7 @@ import FortiusAntCommand     as cmd
 from   FortiusAntTitle                  import githubWindowTitle
 import RadarGraph
 import settings
+import subprocess
 
 #-------------------------------------------------------------------------------
 # constants
@@ -1529,7 +1530,9 @@ class frmFortiusAntGui(wx.Frame):
     # --------------------------------------------------------------------------
     def OnClick_btnSponsor(self, event=False):
         if __name__ == "__main__": print ("OnClick_btnSponsor()")
-        webbrowser.open_new_tab('https://github.com/sponsors/WouterJD')
+        #webbrowser.open_new_tab('https://github.com/sponsors/WouterJD')
+        #import subprocess
+        subprocess.run(['xdg-open', 'https://github.com/sponsors/WouterJD'])
 
     # --------------------------------------------------------------------------
     # O n C l i c k _ b t n H e l p 
@@ -1542,8 +1545,9 @@ class frmFortiusAntGui(wx.Frame):
     # --------------------------------------------------------------------------
     def OnClick_btnHelp(self, event=False):
         if __name__ == "__main__": print ("OnClick_btnHelp()")
-        webbrowser.open_new_tab('https://github.com/WouterJD/FortiusANT/blob/master/doc/FortiusANTUserManual.pdf')
-
+        #webbrowser.open_new_tab('https://github.com/WouterJD/FortiusANT/blob/master/doc/FortiusANTUserManual.pdf')
+        subprocess.run(['xdg-open', 'https://github.com/WouterJD/FortiusANT/blob/master/doc/FortiusANTUserManual.pdf'])
+ 
     # --------------------------------------------------------------------------
     # O n C l o s e
     # --------------------------------------------------------------------------
