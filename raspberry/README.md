@@ -1,13 +1,15 @@
-<<<<<<< HEAD
+
 # The "Wayland" Branch
 The "Wayland" branch tries to solve issues  caused by the transition from Raspian to "Bookworm".
 
 ### Differences
 The desktop no longer relies on X11 but on Wayland.
 Many functions  have been changed. 
-Autostart functionality is now configured differently.
-Configuring the screensaver will be different too.
-Scaling and positioning of WxPython GUI elements
+
+- Autostart functionality is now configured differently.
+- Configuring the screensaver will be different too.
+- Scaling and positioning of WxPython GUI elements
+- and so on
 
 ## Changes from Python <3.10 to Python3.11
 Due to "Bookworm's" transition to Python version 3.11, the old Python installation scripts could no longer be executed as usual. Python now prefers to be installed and run in a virtual Python environment. Additionally, a more recent wxPython wheel is required for the GUI.
@@ -77,4 +79,4 @@ Link: [Link]
 
 =======
 Test
->>>>>>> 37f5c5400b9410f510c040e229fea7d3ad529b36
+

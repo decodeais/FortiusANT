@@ -35,7 +35,7 @@ echo "Process completed."
 
 # Apply the "pishrink" script to the image
 echo "Applying 'pishrink' to the image ..."
-sudo ./pishrink.sh -v -a -z "$image_path" "$image_path.gz"
+sudo ./pishrink.sh -v -a -z "$image_path" 
 
 echo "Process completed."
 read x
