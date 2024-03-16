@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # The "Wayland" Branch
 The "Wayland" branch tries to solve issues  caused by the transition from Raspian to "Bookworm".
 
@@ -74,3 +75,6 @@ Link: [Link]
 
 
 
+=======
+Test
+>>>>>>> 37f5c54 (Create README.md)
