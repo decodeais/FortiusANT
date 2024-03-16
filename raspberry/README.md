@@ -53,21 +53,21 @@ Currently tested on Zero2W and Raspi4B.
 
 # Preparations for creating the Image
 ## Script to run on Raspi
-`cleanSD.sh `          Erase/uninstall everything we don't  need anymore
+- `cleanSD.sh `          Erase/uninstall everything we don't  need anymore
 ## Scripts to run on the PC
-`backup.sh   `           Creates the image from the SD-card
-`pishrink.sh `        Compresses the image to self inflating Raspi-image
+- `backup.sh   `           Creates the image from the SD-card
+- `pishrink.sh `        Compresses the image to self inflating Raspi-image
 
 # Special files
 
 ## Rules
 These files will be copied to the operating sytem at the end of the installation process
-`42-ant-usb-sticks.rules  `    Rules for all known Ant+ sticks and TacX controller ->/etc/udev/rules.d/
-`FortiusAntUsb2.conf      `    Configs for all known Ant+ sticks ->/etc/modprobe.d
+- `42-ant-usb-sticks.rules  `    Rules for all known Ant+ sticks and TacX controller ->/etc/udev/rules.d/
+- `FortiusAntUsb2.conf      `    Configs for all known Ant+ sticks ->/etc/modprobe.d
 
 ## Creation of wxPython 
 
-`build_wxPython_whl.sh  ` This script has to run with the target Python and CPU
+- `build_wxPython_whl.sh  ` This script has to run with the target Python and CPU
 
 ## the link for the Image
 Link: [Link]
