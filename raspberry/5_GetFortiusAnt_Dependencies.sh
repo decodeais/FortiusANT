@@ -1,31 +1,8 @@
 #!/bin/bash
-
-if [[ $1 == "n" ]]; then
-    YES="-y"
-else
-    YES=""
-fi
-
-cd $HOME
-# ----------------------------------------------------------
-# Install git
-# ----------------------------------------------------------
-sudo apt install git
-
-# ----------------------------------------------------------
-# Download (clone) FortuisAnt
-# ----------------------------------------------------------
-if [ -d "$HOME/FortiusANT" ] ; then
-	echo "FortiusANT already present"
-else
-	git clone https://github.com/WouterJD/FortiusANT.git
-fi
-
 if [ -f "FortAntEnv/bin/activate" ]; then
     source "FortAntEnv/bin/activate"; else
     echo -e "\033[0;31m No virtual enviroment \033[0m"  
 fi
-
 # ----------------------------------------------------------
 # Install dependencies
 # ----------------------------------------------------------
