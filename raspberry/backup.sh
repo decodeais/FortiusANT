@@ -4,7 +4,11 @@
 # It cleans the Raspi image from the SD card and creates an image file
 # At the end, it runs the pishrink script from https://github.com/Drewsif/PiShrink
 ####################################################################################
+<<<<<<< HEAD
 sudo apt install pv
+=======
+sudo apt install pv dd
+>>>>>>> eca2233 (changed image compression to zip)
 
 # Check if dcfldd is installed
 if ! command -v dcfldd &>/dev/null; then
@@ -16,23 +20,31 @@ selected_partition=mmcblk0p2
 selected_disk=mmcblk0
 # Unmount the partition
 echo "Unmounting partition $selected_partition ..."
+<<<<<<< HEAD
 umount "/dev/${selected_partition}"
+=======
+umount "/dev/$selected_partition"
+>>>>>>> eca2233 (changed image compression to zip)
 
 # User input for the destination of the image file
 read -p "Please specify the file path for the image (e.g. /path/to/image.img): " image_path
 
 # Execute "zerofree" command
+
 echo "Running 'sudo zerofree -v ${selected_partition}' ..."
 sudo zerofree -v "/dev/${selected_partition}"
 
 # Progress display while creating the image
 echo "Creating image from $selected_disk ..."
 
+
 sudo dd if="/dev/${selected_disk}" of="${image_path}" bs=4M conv=sparse status=progress count=4096
+
 #sudo dd if="/dev/$selected_disk" of=image.img bs=4M conv=sparse status=progress # count= is to cut huge SD-card's 
 
 
 # Adjust permissions of the image path
+
 sudo chown "$USER:$USER" "${image_path}"
 
 echo "Process completed."
@@ -41,6 +53,7 @@ echo "Process completed."
 echo "Applying 'pishrink' to the image ..."
 
 sudo ./pishrink.sh -v -a  "${image_path}" "shrinked_${image_path}" 
+
 #rm "$image_path" # optional
 sudo chown "$USER:$USER" "shrinked_${image_path}"
 zip "shrinked_${image_path}.zip" "shrinked_${image_path}" 
