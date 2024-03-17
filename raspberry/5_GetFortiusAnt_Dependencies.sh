@@ -1,8 +1,11 @@
 #!/bin/bash
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+if [[ $1 == "n" ]]; then
+    YES="-y"
+else
+    YES=""
+fi
+
 cd $HOME
 # ----------------------------------------------------------
 # Install git
@@ -17,20 +20,12 @@ if [ -d "$HOME/FortiusANT" ] ; then
 else
 	git clone https://github.com/WouterJD/FortiusANT.git
 fi
->>>>>>> 9fd4982 (Update 5_GetFortiusAnt_Dependencies.sh)
 
-=======
 if [ -f "FortAntEnv/bin/activate" ]; then
     source "FortAntEnv/bin/activate"; else
     echo -e "\033[0;31m No virtual enviroment \033[0m"  
 fi
->>>>>>> 5bbf657 (check venv)
-=======
-if [ -f "FortAntEnv/bin/activate" ]; then
-    source "FortAntEnv/bin/activate"; else
-    echo -e "\033[0;31m No virtual enviroment \033[0m"  
-fi
->>>>>>> e7dc07d3d2ca2f0627860a12b5e1d7aaf0024054
+
 # ----------------------------------------------------------
 # Install dependencies
 # ----------------------------------------------------------
