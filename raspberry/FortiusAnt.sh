@@ -1,9 +1,5 @@
 #!/bin/bash
-<<<<<<< HEAD
 
-=======
-#cd /home/pi/FortiusANT/raspberry
->>>>>>> e7dc07d3d2ca2f0627860a12b5e1d7aaf0024054
 #------------------------------------------
 #Activate the virtual envirment: FortAntEnv
 cd $HOME/FortiusANT/raspberry/
